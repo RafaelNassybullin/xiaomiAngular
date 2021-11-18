@@ -1,0 +1,101 @@
+main {
+  width: 100%;
+  height: 56.806vw;
+  padding: 0 9.722vw;
+  margin-top: 5.278vw;
+  position: relative;
+  z-index: 5;
+  .text {
+
+    h1 {
+      font-size: 5.556vw;
+      width: 73.389vw;
+      font-family: Gilroy-Semibold, sans-serif;
+      z-index: 9;
+      text-shadow: 1px 1px 15px black;
+    }
+
+    h3 {
+      font-size: 2.083vw;
+      color: #FF4C0D;
+      width: 36.611vw;
+      margin-top: 2.222vw;
+      line-height: 2.500vw;
+    }
+
+    .buttons {
+      position: relative;
+      margin-top: 2.722vw;
+      width: 17.222vw;
+      height: 3.750vw;
+      border-radius: 4.514vw;
+      display: flex;
+      padding: 0 1.8vw;
+      align-items: center;
+      justify-content: space-between;
+      border: 0.347vw solid white;
+
+      button {
+        background: transparent;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        mix-blend-mode: difference;
+        z-index: 6;
+        letter-spacing: 0.035vw;
+        font-size: 1.319vw;
+        font-family: Gilroy-Semibold, sans-serif;
+      }
+
+
+      &:after {
+        position: absolute;
+        top: -5%;
+        left: -1%;
+        content: '';
+        width: 8.194vw;
+        height: 107%;
+        background: white;
+        border-radius: 4.514vw;
+      }
+    }
+  }
+
+
+  .vector-spring-main {
+    position: relative;
+    width: 76.139vw;
+    height: 92.292vw;
+    z-index: -1;
+
+    top: -80vw;
+    right: -38vw;
+
+
+    svg {
+      position: absolute;
+      bottom: 4.3vw;
+      left: 1.136vw;
+      height: 55.917vw;
+    }
+
+    .image {
+      position: absolute;
+      width: 76.139vw;
+      height: 92.292vw;
+      overflow:hidden ;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+    }
+
+
+  }
+
+
+}

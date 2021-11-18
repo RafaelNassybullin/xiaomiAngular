@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <app-navbar></app-navbar>
+    <app-main-page></app-main-page>
+
+    <app-overflow-orange-blur></app-overflow-orange-blur>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'xiaomiAngular';
+
 }

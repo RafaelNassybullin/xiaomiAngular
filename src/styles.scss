@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --sticky-nav-height: 200px;
+}
+
+@font-face {
+  font-family: Gilroy-Regular;
+  src: url("assets/fonts/Gilroy-Regular.woff2");
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url("assets/fonts/Gilroy-Bold.woff2");
+}
+
+@font-face {
+  font-family: Gilroy-BoldItalic;
+  src: url("assets/fonts/Gilroy-BoldItalic.woff2");
+}
+
+@font-face {
+  font-family: Gilroy-RegularItalic;
+  src: url("assets/fonts/Gilroy-RegularItalic.woff2");
+}
+
+@font-face {
+  font-family: Gilroy-Semibold;
+  src: url("assets/fonts/Gilroy-Semibold.woff2");
+}
+
+@font-face {
+  font-family: Gilroy-MediumItalic;
+  src: url("assets/fonts/Gilroy-MediumItalic.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Gilroy-Regular, sans-serif;
+  background: #000000;
+  color: white;
+  font-size: 0.972vw;
+
+}
+
+
+
