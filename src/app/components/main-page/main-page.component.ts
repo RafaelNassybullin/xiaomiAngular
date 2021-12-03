@@ -7,10 +7,7 @@ import {Component, OnInit} from '@angular/core';
       <div class="text">
         <h1>Стильный электросамокат с мощным аккумулятором</h1>
         <h3>Улучшенная производительность <br> для дальних путешествий. <br> Работает так же просто,<br> как и выглядит.</h3>
-        <div class="buttons">
-          <button>Белый</button>
-          <button>Черный</button>
-        </div>
+        <app-buttons></app-buttons>
       </div>
       <div class="vector-spring-main">
         <div class="image">

@@ -25,6 +25,7 @@ nav {
       align-items: center;
       justify-content: center;
       list-style: none;
+      z-index: 15;
 
       li {
         margin: 0 1.458vw;
@@ -32,6 +33,7 @@ nav {
 
         &:hover {
           color: #FF4C0D;
+          font-weight: 600;
         }
       }
     }

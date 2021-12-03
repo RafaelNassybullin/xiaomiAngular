@@ -6,6 +6,18 @@ import {MainPageComponent} from './components/main-page/main-page.component';
 import {OverflowOrangeBlurComponent} from './components/overflow-orange-blur/overflow-orange-blur.component';
 import {NavbarComponent} from "./components/navbar/navbar.component";
 import {StickyNavModule} from "ng2-sticky-nav";
+import { BannerComponent } from './components/banner/banner.component';
+import { LaconeDesignComponent } from './components/lacone-design/lacone-design.component';
+import { AboutComponent } from './components/about/about.component';
+import { SwiperModule } from 'swiper/angular';
+import { QuestionsComponent } from './components/questions/questions.component';
+import { MiHomeComponent } from './components/mi-home/mi-home.component';
+import { BuyComponent } from './components/buy/buy.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SpecificationsTabsComponent } from './components/specifications-tabs/specifications-tabs.component';
+import { TabSecurityComponent } from './components/tab-security/tab-security.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +25,23 @@ import {StickyNavModule} from "ng2-sticky-nav";
     NavbarComponent,
     MainPageComponent,
     OverflowOrangeBlurComponent,
+    BannerComponent,
+    LaconeDesignComponent,
+    AboutComponent,
+    QuestionsComponent,
+    MiHomeComponent,
+    BuyComponent,
+    ButtonsComponent,
+    FooterComponent,
+    SpecificationsTabsComponent,
+    TabSecurityComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StickyNavModule
+    StickyNavModule,
+    SwiperModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

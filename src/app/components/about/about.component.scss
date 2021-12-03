@@ -1,0 +1,60 @@
+@import "~swiper/swiper-bundle.min.css";
+
+
+swiper {
+  width: 100%;
+  height: 41.667vw;
+  //background: #FF4C0D;
+}
+
+.swiper-slide {
+
+
+  .slide-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding:7.5vw  9.722vw;
+    img {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}
+
+
+.about-text{
+  z-index: 5;
+  display:flex;
+  justify-content:space-between;
+  flex-direction: column;
+  height: 100%;
+
+
+  .about-logo{
+
+  }
+  .titles{
+
+    h1{
+    color: #FF4C0D;
+      font-size: 3.125vw;
+    }
+    p{
+      color: #222222;
+      width: 31.944vw;
+      font-size: 1.111vw;
+      line-height: 1.458vw;
+      margin-top: 3vw;
+    }
+  }
+}

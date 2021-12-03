@@ -1,0 +1,41 @@
+section{
+  width: 100%;
+  padding: 0 9.722vw;
+  height: 41.667vw;
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  margin-top: 2vw;
+  img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    object-fit: cover;
+  }
+  .text{
+    height: 25.000vw;
+    display:flex;
+    justify-content:space-between;
+    flex-direction: column;
+    .logo{
+
+    }
+    .titles{
+
+      h2{
+        font-size: 3.125vw;
+        font-weight: 500;
+        margin-bottom: 2.778vw;
+      }
+      p{
+        font-size: 1.250vw;
+        width: 28vw;
+        font-weight: 400;
+        line-height: 2.431vw;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.app-buy {
+  padding: 0 9.7vw;
+
+  .block {
+    position: relative;
+    width: 100%;
+    height: 38.194vw;
+    padding: 3.264vw;
+    border-radius: 1.042vw;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+
+    .buy-image {
+      position: absolute;
+      top: -5vw;
+      right: 4vw;
+      height: 40.278vw;
+      width: 39.444vw;
+      z-index: 2;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .buy-titles_wrap {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      z-index: 2;
+
+      .buy-titles {
+
+        h1 {
+          font-size: 3.125vw;
+          margin-bottom: 1.042vw;
+        }
+
+        h2 {
+          font-size: 2.083vw;
+          color: #FF4C0D;
+        }
+
+        .button-component {
+
+        }
+      }
+
+      button {
+        outline: none;
+        border: none;
+        background: #FF4C0D;
+        color: white;
+        cursor: pointer;
+        width: 8.472vw;
+        height: 3.750vw;
+        border-radius: 5vw;
+        font-size: 1.111vw;
+        z-index: 2;
+
+        font-weight: 600;
+      }
+    }
+
+    .buy-set {
+      z-index: 2;
+
+      h2 {
+        font-size: 1.389vw;
+        margin-bottom: 2.014vw;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 1.458vw;
+        }
+      }
+    }
+  }
+
+}
+
+.overlay-white {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.042vw;
+    object-fit: cover;
+  }
+}

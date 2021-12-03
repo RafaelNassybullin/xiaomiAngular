@@ -1,0 +1,58 @@
+section {
+  padding: 7vw 9.7vw;
+
+  h2 {
+    font-size: 3.125vw;
+    color: #FF4C0D;
+    margin-bottom: 4vw;
+
+  }
+
+  .block-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .block {
+      padding: 0 4.167vw 4vw 4.167vw;
+      width: 38.889vw;
+      height: 38.194vw;
+      border-radius: 1.042vw;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.389vw;
+      }
+
+      p {
+        font-size: 0.972vw;
+        width: 30.556vw;
+        margin-top: 0.7vw;
+      }
+
+      .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        height: 100%;
+        z-index: -1;
+        transform: scale(1.1) translateY(1.1vw);
+
+        img {
+          object-fit: contain;
+
+        }
+
+
+      }
+    }
+  }
+}
+

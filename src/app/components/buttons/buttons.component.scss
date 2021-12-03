@@ -1,0 +1,37 @@
+    .buttonss {
+      position: relative;
+      margin-top: 2.722vw;
+      width: 17.222vw;
+      height: 3.750vw;
+      border-radius: 4.514vw;
+      display: flex;
+      padding: 0 1.8vw;
+      align-items: center;
+      justify-content: space-between;
+      border: 0.347vw solid white;
+
+      button {
+        background: transparent;
+        outline: none;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        mix-blend-mode: difference;
+        z-index: 6;
+        letter-spacing: 0.035vw;
+        font-size: 1.319vw;
+        font-family: Gilroy-Semibold, sans-serif;
+      }
+
+
+      &:after {
+        position: absolute;
+        top: -5%;
+        left: -1%;
+        content: '';
+        width: 8.194vw;
+        height: 107%;
+        background: white;
+        border-radius: 4.514vw;
+      }
+    }
