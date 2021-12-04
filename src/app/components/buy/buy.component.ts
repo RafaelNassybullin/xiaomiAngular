@@ -13,8 +13,7 @@ import {Component, OnInit} from '@angular/core';
             <h1>Mi Electric Scooter Pro 2</h1>
             <h2>54 990 ₽</h2>
             <div class="button-component">
-                      <app-buttons></app-buttons>
-
+              <app-buttons></app-buttons>
             </div>
           </div>
           <button>Купить</button>

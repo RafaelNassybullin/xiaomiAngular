@@ -5,6 +5,7 @@ main {
   margin-top: 5.278vw;
   position: relative;
   z-index: 5;
+  //overflow: hidden;
   .text {
 
     h1 {
@@ -28,7 +29,7 @@ main {
     position: relative;
     width: 76.139vw;
     height: 92.292vw;
-    z-index: -1;
+    z-index: -9;
     top: -80vw;
     right: -38vw;
 
