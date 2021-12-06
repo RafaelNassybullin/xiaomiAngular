@@ -12,8 +12,8 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
       </div>
       <div class="vector-spring-main">
         <div class="image">
-          <img  src="../../../assets/image/blackk.webp" alt="">
-          <img *ngIf="!changeThemeMain.toggleTheme" src="../../../assets/image/white.webp" alt="">
+          <img  src="../../../assets/image/blackWebp.webp" alt="">
+          <img *ngIf="!changeThemeMain.toggleTheme" src="../../../assets/image/whiteWebp.webp" alt="">
         </div>
         <svg height="52.917vw" viewBox="0 0 749 792" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"

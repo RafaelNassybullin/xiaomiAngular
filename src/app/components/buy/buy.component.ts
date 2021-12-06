@@ -7,8 +7,8 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
     <section class="app-buy">
       <div [ngStyle]="b.toggleTheme?{background:'white'}:{}" class="block">
         <div class="buy-image">
-          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/whie.webp" alt="">
-          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/blackk.webp" alt="">
+          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/whiteWebp.webp" alt="">
+          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/blackWebp.webp" alt="">
         </div>
         <div class="buy-titles_wrap">
           <div class="buy-titles">

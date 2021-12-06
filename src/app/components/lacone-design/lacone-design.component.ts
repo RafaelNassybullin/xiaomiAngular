@@ -26,16 +26,17 @@ interface cardDataModel{
   styleUrls: ['./lacone-design.component.scss']
 })
 export class LaconeDesignComponent implements OnInit {
+
   constructor(public laconeChangeTheme:BooleanToggleThemeService) { }
 
-cardData:any = [
+  cardData:Array<cardDataModel> = [
     {
-      imgCard:'../../../assets/image/111.png',
+      imgCard:'../../../assets/image/111.webp',
       titleCard:'Минималистичный дизайн',
       titleParagraph:'Рама, компоненты и аксессуары скутера выдержаны в едином стиле, где удобство пользователя выходит на первое место.  Одного прикосновения достаточно, чтобы запустить самокат.'
     },
     {
-      imgCard:'../../../assets/image/222.png',
+      imgCard:'../../../assets/image/222.webp',
       titleCard:'Удобная панель управления',
       titleParagraph:'Удобно расположенные элементы управления. Отображение 8 типов данных в реальном времени: скорость, режим, заряд аккумулятора, состояние блокировки и другая информация.'
     }
