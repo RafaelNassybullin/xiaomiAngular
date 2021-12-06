@@ -98,7 +98,6 @@
     user-select: none;
     cursor: pointer;
   }
-
   .slider-custom-navigation {
     display: flex;
     align-items: center;
@@ -116,20 +115,22 @@
       justify-content: center;
       cursor: pointer;
       user-select: none;
-
+      &.whiteSliderNavThemeClass{
+        color: #ffffff;background: #000000;
+        svg{
+          fill: white;
+        }
+      }
       &:hover {
         background: #FF4C0D;
-
         svg {
           fill: white;
         }
       }
     }
-
     .prev {
       transform: translateX(-0.1vw);
     }
-
     .next {
       transform: translateX(0.1vw);
     }

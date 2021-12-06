@@ -8,7 +8,7 @@ nav {
   justify-content: space-between;
   padding: 0 9.722vw;
   transform: translateY(0);
-  transition: 300ms ease-in-out;
+  transition: 150ms ease-in-out;
   overflow: hidden;
 
   &.sticky {
@@ -16,18 +16,17 @@ nav {
     top: 0;
     height: 5vw;
     left: 0;
-    transition: 300ms;
+    transition: 150ms;
     backdrop-filter: blur(10px);
     background: rgba(97, 79, 79, 0.2);
 
     &.yes {
-      transition: 300ms;
+      transition: 150ms;
       transform: translateY(-105%);
     }
 
-    &.background-off {
-      background: transparent;
-      backdrop-filter: none;
+    &.white-nav {
+      background: #ffffff33;
     }
 
 
@@ -39,6 +38,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 36;
+
     .logo-nav-wrapper {
       display: flex;
       align-items: center;
@@ -62,10 +62,12 @@ nav {
         li {
           margin: 0 1.458vw;
           cursor: pointer;
+          font-size: 1.111vw;
+          font-weight: 600;
 
           &:hover {
             color: #FF4C0D;
-            font-weight: 600;
+
           }
         }
       }
@@ -85,3 +87,11 @@ nav {
 }
 
 
+@-moz-document url-prefix() {
+  nav.sticky {
+    background: #FF4C0D;
+  }
+  nav.sticky.white-nav {
+    background: #ffffff;
+  }
+}

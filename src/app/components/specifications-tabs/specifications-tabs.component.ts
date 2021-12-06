@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-specifications-tabs',
@@ -8,19 +9,19 @@ import {Component, OnInit} from '@angular/core';
       <div class="tabs-container">
         <div class="tabs-wrap">
           <div (click)="value = 1" [ngClass]="value===1?'tabs-item _active':'tabs-item'" >
-            <h3>Три режима скорости</h3>
-            <p>Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость,
+            <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===1?{color:'#FF4C0D'}:{}">Три режима скорости</h3>
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===1?{color:'black'}:{}">Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость,
               если опаздываете на работу. Во время прогулки по парку активируйте режим «D». Включите режим «Пешеход»,
               когда двигаетесь по оживлённой улице.</p>
           </div>
           <div (click)="value = 2" [ngClass]="value===2?'tabs-item _active':'tabs-item'">
-            <h3>Система восстановления энергии</h3>
-            <p>Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую,
+            <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'#FF4C0D'}:{}">Система восстановления энергии</h3>
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'black'}:{}">Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую,
               позволяя увеличить общий запас хода самоката.</p>
           </div>
           <div (click)="value = 3" [ngClass]="value===3?'tabs-item _active':'tabs-item'">
-            <h3>Мощная батарея</h3>
-            <p>Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без
+            <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===3?{color:'#FF4C0D'}:{}">Мощная батарея</h3>
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===3?{color:'black'}:{}">Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без
               подзарядки.</p>
           </div>
           <div class="border">
@@ -82,7 +83,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SpecificationsTabsComponent implements OnInit {
   public value: number = 1
-  constructor() {
+  constructor(public tabsOneThemeChange:BooleanToggleThemeService) {
   }
 
   ngOnInit(): void {

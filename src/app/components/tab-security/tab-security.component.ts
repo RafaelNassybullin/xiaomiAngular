@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-tab-security',
@@ -8,23 +9,23 @@ import { Component, OnInit } from '@angular/core';
       <div class="tabs-container">
         <div class="tabs-wrap">
           <div (click)="securityValue = 1" [ngClass]="securityValue===1?'tabs-item _active':'tabs-item'">
-            <h3>Яркие ходовые огни</h3>
-            <p>Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'#FF4C0D'}:{}">Яркие ходовые огни</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'black'}:{}">Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников
               движения.</p>
           </div>
           <div (click)="securityValue = 2" [ngClass]="securityValue===2?'tabs-item _active':'tabs-item'">
-            <h3>Двойная тормозная система</h3>
-            <p>При нажатии наручку тормоза системы переднего и заднего колеса активируются последовательно, сокращая
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'#FF4C0D'}:{}">Двойная тормозная система</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'black'}:{}">При нажатии наручку тормоза системы переднего и заднего колеса активируются последовательно, сокращая
               тормозной путь и обеспечивая безопасную и плавную остановку.</p>
           </div>
           <div (click)="securityValue = 3" [ngClass]="securityValue===3?'tabs-item _active':'tabs-item'">
-            <h3>Яркая задняя фара</h3>
-            <p>При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'#FF4C0D'}:{}">Яркая задняя фара</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'black'}:{}">При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она
               начинает мигать, предупреждая других участников движения.</p>
           </div>
           <div (click)="securityValue = 4" [ngClass]="securityValue===4?'tabs-item _active':'tabs-item'">
-            <h3>Отражатели спереди, сбоку и сзади</h3>
-            <p>Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в темное время суток
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'#FF4C0D'}:{}">Отражатели спереди, сбоку и сзади</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'black'}:{}">Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в темное время суток
               безопаснее.</p>
           </div>
           <div class="border">
@@ -97,7 +98,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabSecurityComponent implements OnInit {
   public securityValue: number = 1;
-  constructor() { }
+  constructor(public tabsTwoThemeChange:BooleanToggleThemeService) { }
 
   ngOnInit(): void {
   }

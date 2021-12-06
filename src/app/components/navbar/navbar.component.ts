@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, ViewEncapsulation} from '@angular/core';
 import {fromEvent} from "rxjs";
 import {distinctUntilChanged, map, pairwise, throttleTime} from "rxjs/operators";
 import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
@@ -10,7 +10,10 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
     innerWidthh>600&&value==='[UP!]'
     ?'sticky yes'
     :innerWidthh===0||innerWidthh<1
-    ?'':'sticky'
+    ?''
+    :navbarChangeTheme.toggleTheme
+    ?'sticky white-nav'
+    :'sticky '
 ">
       <div class="wrap-nav">
         <div class="logo-nav-wrapper">
@@ -29,11 +32,12 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
             <li>FAQ</li>
           </ul>
         </div>
-        <button>Купить</button>
+        <button [ngStyle]="navbarChangeTheme.toggleTheme?{background:'black', color:'white'}:{}">Купить</button>
       </div>
     </nav>
   `,
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent implements OnInit {
   public value!:string

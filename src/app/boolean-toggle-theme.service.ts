@@ -4,11 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BooleanToggleThemeService {
-
   constructor() { }
-
   public toggleTheme: boolean = false
-
   toggle() {
     this.toggleTheme = !this.toggleTheme
     console.log(this.toggleTheme);
@@ -19,6 +16,4 @@ export class BooleanToggleThemeService {
   t(){
     this.toggleTheme = true
   }
-
-
 }

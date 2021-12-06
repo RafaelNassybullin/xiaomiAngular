@@ -14,9 +14,10 @@
     .buy-image {
       position: absolute;
       top: -5vw;
-      right: 4vw;
+      //right: 4vw;
+      right: 0;
       height: 40.278vw;
-      width: 39.444vw;
+      //width: 39.444vw;
       z-index: 2;
       display: flex;
       overflow: hidden;
@@ -24,19 +25,34 @@
       justify-content: center;
 
 
+
+      width: 44.444vw;
+
       img {
 
-        transform: translateX(19vw);
-        width: 100%;
+        //transform: translateX(19vw);
+        //width: 100%;
         height: 100%;
         object-fit: contain;
         transition: 500ms;
         z-index: 9;
 
+
+
+        transform: translateX(22vw);
+        width: 39vw;
+margin-right: 3vw;
+
+
+
         &._show {
           transition: 500ms;
-          transform: translateX(-19vw);
+          //transform: translateX(-19vw);
 
+
+
+
+          transform: translateX(-22vw);
         }
       }
 

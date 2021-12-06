@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 interface cardDataModel{
   imgCard:string
@@ -16,8 +17,8 @@ interface cardDataModel{
             <div class="image">
               <img [src]="i.imgCard" alt="">
             </div>
-            <h3>{{i.titleCard}}</h3>
-            <p>{{i.titleParagraph}}</p>
+            <h3 >{{i.titleCard}}</h3>
+            <p >{{i.titleParagraph}}</p>
         </div>
       </div>
     </section>
@@ -25,7 +26,7 @@ interface cardDataModel{
   styleUrls: ['./lacone-design.component.scss']
 })
 export class LaconeDesignComponent implements OnInit {
-  constructor() { }
+  constructor(public laconeChangeTheme:BooleanToggleThemeService) { }
 
 cardData:any = [
     {

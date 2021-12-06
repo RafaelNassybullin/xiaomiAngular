@@ -27,17 +27,17 @@ SwiperCore.use([Navigation]);
         </swiper>
       </div>
       <div class="button-and-slider-navigation">
-        <button>Оставить отзыв</button>
+        <button [ngStyle]="sliderChangeTheme.toggleTheme?{background:'black', color:'white'}:{}">Оставить отзыв</button>
         <div class="slider-custom-navigation">
-          <div class="slider-prev">
-            <svg class="prev" height="1.319vw" fill="black" xmlns="http://www.w3.org/2000/svg"
+          <div [ngClass]="sliderChangeTheme.toggleTheme?'slider-prev whiteSliderNavThemeClass':'slider-prev'">
+            <svg  class="prev" height="1.319vw" fill="black" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 32.76 66.15">
               <path
                 d="M10.57,33.18c6.52,8.1,12.74,15.88,19,23.61,2.15,2.65,4,5.46.55,8.16s-5.72.52-7.9-2.23C15.53,54.25,8.8,45.8,1.92,37.47-.66,34.35-.63,31.7,2,28.65q10.8-12.72,21.37-25.6c2.15-2.6,4.58-4.34,7.6-1.84s2,5.15-.27,7.79C23.93,17,17.31,25.05,10.57,33.18Z"/>
             </svg>
           </div>
-          <div class="slider-next">
-            <svg class="next" height="1.319vw" fill="black" xmlns="http://www.w3.org/2000/svg"
+          <div [ngClass]="sliderChangeTheme.toggleTheme?'slider-next whiteSliderNavThemeClass':'slider-next'">
+            <svg  class="next" height="1.319vw" fill="black" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 32.76 66.15">
               <path
                 d="M22.19,33.18c-6.51,8.1-12.73,15.88-19,23.61C1,59.44-.79,62.25,2.63,65s5.73.52,7.9-2.23C17.24,54.25,24,45.8,30.84,37.47c2.59-3.12,2.55-5.77,0-8.82Q20,15.93,9.43,3.05C7.29.45,4.85-1.29,1.83,1.21S-.12,6.36,2.1,9C8.83,17,15.45,25.05,22.19,33.18Z"/>

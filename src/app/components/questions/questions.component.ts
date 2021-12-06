@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-questions',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
       <div class="title-wrapper">
         <h1>Часто задаваемые вопросы</h1>
         <p>Все ваши часто задаваемые вопросы о электросамокате Mi Scooter Pro 2. Если у вас есть собственный вопрос - задайте его через форму обратной связи.</p>
-        <button>Задать вопрос</button>
+        <button [ngStyle]="questionsTheme.toggleTheme?{background:'black', color:'white'}:{}">Задать вопрос</button>
       </div>
       <div class="questions-wrapper">
         <div class="question-items">
@@ -33,7 +34,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public questionsTheme:BooleanToggleThemeService) { }
 
   ngOnInit(): void {
   }
