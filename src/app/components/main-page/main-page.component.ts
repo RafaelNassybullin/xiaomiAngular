@@ -1,17 +1,19 @@
 import {Component, OnInit} from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-main-page',
   template: `
     <main>
       <div class="text">
-        <h1>Стильный электросамокат с мощным аккумулятором</h1>
-        <h3>Улучшенная производительность <br> для дальних путешествий. <br> Работает так же просто,<br> как и выглядит.</h3>
+        <h1 [ngStyle]="changeThemeMain.toggleTheme?{color:'#FF4C0D', textShadow:'unset'}:{}">Стильный электросамокат с мощным аккумулятором</h1>
+        <h3 [ngStyle]="changeThemeMain.toggleTheme?{color:'black'}:{}">Улучшенная производительность <br> для дальних путешествий. <br> Работает так же просто,<br> как и выглядит.</h3>
         <app-buttons></app-buttons>
       </div>
       <div class="vector-spring-main">
         <div class="image">
-          <img src="../../../assets/image/white.webp" alt="">
+          <img  src="../../../assets/image/blackk.webp" alt="">
+          <img *ngIf="!changeThemeMain.toggleTheme" src="../../../assets/image/white.webp" alt="">
         </div>
         <svg height="52.917vw" viewBox="0 0 749 792" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -25,7 +27,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() {
+  constructor(public changeThemeMain:BooleanToggleThemeService) {
   }
 
   ngOnInit(): void {

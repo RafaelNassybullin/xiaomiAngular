@@ -18,11 +18,29 @@
       height: 40.278vw;
       width: 39.444vw;
       z-index: 2;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+
+
       img {
+
+        transform: translateX(19vw);
         width: 100%;
         height: 100%;
         object-fit: contain;
+        transition: 500ms;
+        z-index: 9;
+
+        &._show {
+          transition: 500ms;
+          transform: translateX(-19vw);
+
+        }
       }
+
+
     }
 
     .buy-titles_wrap {

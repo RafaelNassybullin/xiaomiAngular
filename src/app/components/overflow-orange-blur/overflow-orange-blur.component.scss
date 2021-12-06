@@ -1,22 +1,111 @@
 
 .overflow-blur {
   width: 100%;
-  height: 342vw;
+  height: 514vw;
   position: absolute;
   top: 0;
   left: 0;
   background: #0000003D;
   backdrop-filter: blur(40px);
   z-index: -3;
+
+  &.overflow-blur-white{
+    background: #E0E0E040;
+    backdrop-filter: blur(4px);
+  }
 }
 
 .blur-ellipse {
-  position: absolute;
-  top: -74vw;
-  right: -67vw;
   z-index: -4;
-  width: 171.611vw;
-  height: 128.611vw;
+  position: absolute;
+
+  &.blur-elipse-one {
+
+    top: -74vw;
+    right: -67vw;
+    width: 171.611vw;
+    height: 128.611vw;
+  }
+
+  &.blur-elipse-two {
+
+    top: 44vw;
+    right: 51vw;
+    width: 84.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-three {
+
+    top: 97vw;
+    right: -39vw;
+    width: 84.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-four {
+    top: 138vw;
+    right: 2vw;
+    width: 38.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-five {
+    top: 148vw;
+    right: 14vw;
+    width: 38.611vw;
+    height: 56vw;
+  }
+
+  &.blur-elipse-six {
+    top: 195vw;
+    right: 73vw;
+    width: 38.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-seven {
+    top: 240vw;
+    right: 49vw;
+    width: 55.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-eight {
+    top: 268vw;
+    right: 0;
+    width: 56.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-nine {
+    top: 254vw;
+    right: -38vw;
+    width: 97.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-ten {
+    top: 305vw;
+    right: 62vw;
+    width: 66.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-eleven {
+    top: 407vw;
+    right: 58vw;
+    width: 64.611vw;
+    height: 63vw;
+  }
+
+  &.blur-elipse-twelve {
+    top: 332vw;
+    right: -21vw;
+    width: 94.611vw;
+    height: 89vw;
+  }
+
 
   img {
     width: 100%;
@@ -25,3 +114,65 @@
   }
 }
 
+.reusable-decor-line {
+  width: 87.222vw;
+  position: absolute;
+
+  &.reusable-decor-line-1 {
+    top: 167vw;
+    left: 80vw;
+    transform: rotate(234deg);
+
+    img {
+      transform: scaleX(-1);
+    }
+  }
+
+  &.reusable-decor-line-2 {
+    top: 229vw;
+    left: -62vw;
+    transform: rotate(113deg);
+    z-index: -2;
+
+  }
+
+  &.reusable-decor-line-3 {
+    top: 373vw;
+    left: 80vw;
+    transform: rotate(234deg);
+
+    img {
+      transform: scaleX(-1);
+    }
+  }
+
+  &.reusable-decor-line-4 {
+    top: 453vw;
+    left: 2vw;
+    transform: rotate(-4deg);
+    width: 97vw;
+    z-index: -2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+  }
+}
+
+.line-decoration {
+  position: absolute;
+  right: -4vw;
+  top: 268vw;
+  width: 43.056vw;
+  height: 36.806vw;
+  z-index: -2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

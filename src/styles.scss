@@ -51,6 +51,14 @@ body {
   background: #222222;
   color: white;
   font-size: 0.972vw;
+  transition: 300ms ease-in-out;
+    transition-property: background-color, color;
+  &.whiteTheme{
+    transition: 300ms ease-in-out;
+    transition-property: background-color, color;
+    background: #E0E0E0;
+  color: #020101;
+  }
 }
 
 img{

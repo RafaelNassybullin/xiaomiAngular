@@ -5,7 +5,6 @@ import {AppComponent} from './app.component';
 import {MainPageComponent} from './components/main-page/main-page.component';
 import {OverflowOrangeBlurComponent} from './components/overflow-orange-blur/overflow-orange-blur.component';
 import {NavbarComponent} from "./components/navbar/navbar.component";
-import {StickyNavModule} from "ng2-sticky-nav";
 import { BannerComponent } from './components/banner/banner.component';
 import { LaconeDesignComponent } from './components/lacone-design/lacone-design.component';
 import { AboutComponent } from './components/about/about.component';
@@ -18,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpecificationsTabsComponent } from './components/specifications-tabs/specifications-tabs.component';
 import { TabSecurityComponent } from './components/tab-security/tab-security.component';
+import { SliderRewievComponent } from './components/slider-rewiev/slider-rewiev.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +35,11 @@ import { TabSecurityComponent } from './components/tab-security/tab-security.com
     FooterComponent,
     SpecificationsTabsComponent,
     TabSecurityComponent,
+    SliderRewievComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StickyNavModule,
     SwiperModule,
     BrowserAnimationsModule,
   ],

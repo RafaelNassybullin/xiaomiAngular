@@ -1,12 +1,14 @@
 import {Component, OnInit} from '@angular/core';
+import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-buy',
   template: `
     <section class="app-buy">
-      <div class="block">
+      <div [ngStyle]="b.toggleTheme?{background:'white'}:{}" class="block">
         <div class="buy-image">
-          <img src="../../../assets/image/white.png" alt="">
+          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/whie.webp" alt="">
+          <img [ngClass]="b.toggleTheme?'_show':''" src="../../../assets/image/blackk.webp" alt="">
         </div>
         <div class="buy-titles_wrap">
           <div class="buy-titles">
@@ -31,7 +33,7 @@ import {Component, OnInit} from '@angular/core';
           </ul>
         </div>
         <div class="overlay-white">
-          <img src="../../../assets/image/overlay-white-prefooter.png" alt="">
+          <img  src="../../../assets/image/overlay-white-prefooter.png" alt="">
         </div>
       </div>
     </section>
@@ -40,7 +42,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class BuyComponent implements OnInit {
 
-  constructor() {
+  constructor(public b:BooleanToggleThemeService) {
   }
 
   ngOnInit(): void {

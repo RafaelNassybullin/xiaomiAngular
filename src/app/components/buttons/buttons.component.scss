@@ -9,7 +9,7 @@
       align-items: center;
       justify-content: space-between;
       border: 0.347vw solid white;
-
+      transition:500ms ;
       button {
         background: transparent;
         outline: none;
@@ -21,12 +21,27 @@
         letter-spacing: 0.035vw;
         font-size: 1.319vw;
         font-family: Gilroy-Semibold, sans-serif;
+        &.change-white-color{
+          color: black;
+        }
       }
+      &._activeWhite{
+        border: 0.347vw solid black;
+        color: black;
+        transition:500ms ;
+        &:after {
+          background: black;
+          transition: 500ms;
+          left: 46%;
+          width: 9.194vw;
 
+        }
+      }
 
       &:after {
         position: absolute;
         top: -5%;
+        transition: 500ms;
         left: -1%;
         content: '';
         width: 8.194vw;

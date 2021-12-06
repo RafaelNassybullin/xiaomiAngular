@@ -11,6 +11,7 @@ import {Component} from '@angular/core';
     <app-tab-security></app-tab-security>
     <app-mi-home></app-mi-home>
     <app-about></app-about>
+    <app-slider-rewiev></app-slider-rewiev>
     <app-questions></app-questions>
     <app-buy></app-buy>
     <app-footer></app-footer>

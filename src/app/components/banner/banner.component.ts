@@ -4,6 +4,11 @@ import {Component, Input, OnInit} from '@angular/core';
   selector: 'app-banner',
   template: `
     <section *ngFor="let i of sl">
+      <div class="decoratiom-line">
+        <img src="../../../assets/image/banner-decor-line.svg" alt="">
+      </div>
+
+
       <img [src]="'../../../assets/image/' + i.image" alt="">
       <div class="text">
         <div class="logo">
@@ -16,6 +21,11 @@ import {Component, Input, OnInit} from '@angular/core';
           <h2>{{i.text}}</h2>
           <p>{{i.paragraph}}</p>
         </div>
+      </div>
+
+
+      <div class="decoratiom-line_2">
+        <img src="../../../assets/image/banner-decoration-line_2.svg" alt="">
       </div>
     </section>
   `,
