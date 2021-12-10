@@ -1,12 +1,12 @@
 
 .overflow-blur {
   width: 100%;
-  height: 514vw;
+  //height: 514vw;
   position: absolute;
   top: 0;
   left: 0;
   background: #0000003D;
-  backdrop-filter: blur(40px);
+  //backdrop-filter: blur(40px);
   z-index: -3;
 
   &.overflow-blur-white{
