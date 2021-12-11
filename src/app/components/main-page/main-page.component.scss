@@ -5,6 +5,14 @@ main {
   margin-top: 5.278vw;
   position: relative;
   z-index: 5;
+  @media(max-width: 740px) {
+    height: 68.806vw;
+    padding: 0 5.722vw;
+    margin-top: 13.278vw;
+  }
+  @media(max-width: 480px) {
+
+  }
   //overflow: hidden;
   .text {
 
@@ -14,6 +22,13 @@ main {
       font-family: Gilroy-Semibold, sans-serif;
       z-index: 9;
       text-shadow: 1px 1px 15px black;
+      @media(max-width: 740px) {
+        font-size: 6vw;
+        width: 83.389vw;
+      }
+      @media(max-width: 480px) {
+
+      }
     }
 
     h3 {
@@ -22,6 +37,15 @@ main {
       width: 36.611vw;
       margin-top: 2.222vw;
       line-height: 2.500vw;
+      @media(max-width: 740px) {
+        font-size: 3.083vw;
+        width: 55.611vw;
+        margin-top: 3.222vw;
+        line-height: 3.5vw;
+      }
+      @media(max-width: 480px) {
+
+      }
     }
   }
 
@@ -32,7 +56,15 @@ main {
     z-index: -9;
     top: -80vw;
     right: -38vw;
+    @media(max-width: 740px) {
+      width: 129.139vw;
+      height: 152.292vw;
+      top: -113vw;
+      right: -35vw;
+    }
+    @media(max-width: 480px) {
 
+    }
 
     svg {
       position: absolute;
@@ -45,7 +77,14 @@ main {
       position: absolute;
       width: 76.139vw;
       height: 92.292vw;
-      overflow:hidden ;
+      overflow: hidden;
+      @media(max-width: 740px) {
+        width: 119.437vw;
+height: 125.063vw;
+      }
+      @media(max-width: 480px) {
+
+      }
 
       img {
         position: absolute;

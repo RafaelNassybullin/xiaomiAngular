@@ -4,24 +4,29 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 @Component({
   selector: 'app-specifications-tabs',
   template: `
-        <section class="specifications-tabs">
+    <section class="specifications-tabs">
       <h1>Мощная батарея и экономичный расход заряда позволяют преодолевать расстояния до 45 км</h1>
+      <app-mobile-without-tabs [mobileSecuredata]="specifictionsdata"></app-mobile-without-tabs>
       <div class="tabs-container">
         <div class="tabs-wrap">
-          <div (click)="value = 1" [ngClass]="value===1?'tabs-item _active':'tabs-item'" >
+          <div (click)="value = 1" [ngClass]="value===1?'tabs-item _active':'tabs-item'">
             <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===1?{color:'#FF4C0D'}:{}">Три режима скорости</h3>
-            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===1?{color:'black'}:{}">Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость,
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===1?{color:'black'}:{}">Три режима езды позволяют
+              почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость,
               если опаздываете на работу. Во время прогулки по парку активируйте режим «D». Включите режим «Пешеход»,
               когда двигаетесь по оживлённой улице.</p>
           </div>
           <div (click)="value = 2" [ngClass]="value===2?'tabs-item _active':'tabs-item'">
-            <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'#FF4C0D'}:{}">Система восстановления энергии</h3>
-            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'black'}:{}">Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую,
+            <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'#FF4C0D'}:{}">Система восстановления
+              энергии</h3>
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===2?{color:'black'}:{}">Во время торможения и движения
+              по инерции система преобразовывает кинетическую энергию в электрическую,
               позволяя увеличить общий запас хода самоката.</p>
           </div>
           <div (click)="value = 3" [ngClass]="value===3?'tabs-item _active':'tabs-item'">
             <h3 [ngStyle]="tabsOneThemeChange.toggleTheme&&value===3?{color:'#FF4C0D'}:{}">Мощная батарея</h3>
-            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===3?{color:'black'}:{}">Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без
+            <p [ngStyle]="tabsOneThemeChange.toggleTheme&&value===3?{color:'black'}:{}">Самокат оснащен аккумулятором
+              емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без
               подзарядки.</p>
           </div>
           <div class="border">
@@ -38,7 +43,7 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
           </div>
         </div>
 
-        <div  class="tabs-content-container" >
+        <div class="tabs-content-container">
           <div [ngClass]="
           value===1
           ?'tabs-content-wrapper _active-content-one'
@@ -82,11 +87,33 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
   styleUrls: ['./specifications-tabs.component.scss']
 })
 export class SpecificationsTabsComponent implements OnInit {
-  public value: number = 1
-  constructor(public tabsOneThemeChange:BooleanToggleThemeService) {
+
+
+  constructor(public tabsOneThemeChange: BooleanToggleThemeService) {
   }
 
   ngOnInit(): void {
   }
+
+
+  public value: number = 1
+  public specifictionsdata: any = [
+    {
+      title: 'Три режима скорости',
+      paragraph: 'Три режима езды позволяют почуствовать себя комфортно в любой ситуации. Режим «S» увеличитвает скорость, если опаздываете на работу. Во время прогулки по парку активируйте режим «D». Включите режим «Пешеход», когда двигаетесь по оживлённой улице.',
+      image: 'tabs-image-one.jpg'
+    },
+    {
+      title: 'Система восстановления энергии',
+      paragraph: 'Во время торможения и движения по инерции система преобразовывает кинетическую энергию в электрическую, позволяя увеличить общий запас хода самоката.',
+      image: 'tab-image_2.jpg'
+    },
+    {
+      title: 'Мощная батарея',
+      paragraph: 'Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать расстояния до 45 км без подзарядки.',
+      image: 'tab-image_3.jpg'
+    }
+  ]
+
 
 }

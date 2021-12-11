@@ -1,31 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 
 @Component({
   selector: 'app-tab-security',
   template: `
-        <section class="security">
+    <section class="security">
       <h1>Заботится о вашей безопасности</h1>
+      <app-mobile-without-tabs
+        [mobileSecuredata]="dataSecurityMobileTab">
+      </app-mobile-without-tabs>
       <div class="tabs-container">
         <div class="tabs-wrap">
           <div (click)="securityValue = 1" [ngClass]="securityValue===1?'tabs-item _active':'tabs-item'">
-            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'#FF4C0D'}:{}">Яркие ходовые огни</h3>
-            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'black'}:{}">Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'#FF4C0D'}:{}">Яркие ходовые
+              огни</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===1?{color:'black'}:{}">Продуманный угол
+              рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников
               движения.</p>
           </div>
           <div (click)="securityValue = 2" [ngClass]="securityValue===2?'tabs-item _active':'tabs-item'">
-            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'#FF4C0D'}:{}">Двойная тормозная система</h3>
-            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'black'}:{}">При нажатии наручку тормоза системы переднего и заднего колеса активируются последовательно, сокращая
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'#FF4C0D'}:{}">Двойная тормозная
+              система</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===2?{color:'black'}:{}">При нажатии наручку
+              тормоза системы переднего и заднего колеса активируются последовательно, сокращая
               тормозной путь и обеспечивая безопасную и плавную остановку.</p>
           </div>
           <div (click)="securityValue = 3" [ngClass]="securityValue===3?'tabs-item _active':'tabs-item'">
-            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'#FF4C0D'}:{}">Яркая задняя фара</h3>
-            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'black'}:{}">При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'#FF4C0D'}:{}">Яркая задняя
+              фара</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===3?{color:'black'}:{}">При включении ходовых
+              огней задняя фара включается автоматически. При нажатии на ручку тормоза она
               начинает мигать, предупреждая других участников движения.</p>
           </div>
           <div (click)="securityValue = 4" [ngClass]="securityValue===4?'tabs-item _active':'tabs-item'">
-            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'#FF4C0D'}:{}">Отражатели спереди, сбоку и сзади</h3>
-            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'black'}:{}">Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в темное время суток
+            <h3 [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'#FF4C0D'}:{}">Отражатели спереди,
+              сбоку и сзади</h3>
+            <p [ngStyle]="tabsTwoThemeChange.toggleTheme&&securityValue===4?{color:'black'}:{}">Улучшенные отражатели,
+              размещенные с четырех сторон, делают вашу поездку в темное время суток
               безопаснее.</p>
           </div>
           <div class="border">
@@ -91,16 +102,39 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
         </div>
       </div>
     </section>
-
-
   `,
   styleUrls: ['./tab-security.component.scss']
 })
 export class TabSecurityComponent implements OnInit {
-  public securityValue: number = 1;
-  constructor(public tabsTwoThemeChange:BooleanToggleThemeService) { }
+  constructor(public tabsTwoThemeChange: BooleanToggleThemeService) {}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+
+  public securityValue: number = 1;
+  public dataSecurityMobileTab:any = [
+    {
+      title:'Яркие ходовые огни',
+      paragraph:'Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников движения.',
+      image:'security-component-tab_1.jpg'
+    },
+    {
+      title:'Двойная тормозная система',
+      paragraph:'При нажатии наручку тормоза системы переднего и заднего колеса активируются последовательно, сокращая тормозной путь и обеспечивая безопасную и плавную остановку.',
+      image:'security-component-tab_3.jpg'
+    },
+    {
+      title:'Яркая задняя фара',
+      paragraph:'При включении ходовых огней задняя фара включается автоматически. При нажатии на ручку тормоза она начинает мигать, предупреждая других участников движения.',
+      image:'security-component-tab_7.jpeg'
+    },
+    {
+      title:'Отражатели спереди, сбоку и сзади',
+      paragraph:'Улучшенные отражатели, размещенные с четырех сторон, делают вашу поездку в темное время суток безопаснее.',
+      image:'security-component-tab_5.jpg'
+    },
+  ]
+
+
+
 
 }

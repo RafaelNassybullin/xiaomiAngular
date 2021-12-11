@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpecificationsTabsComponent } from './components/specifications-tabs/specifications-tabs.component';
 import { TabSecurityComponent } from './components/tab-security/tab-security.component';
 import { SliderRewievComponent } from './components/slider-rewiev/slider-rewiev.component';
+import { MobileWithoutTabsComponent } from './components/mobile-without-tabs/mobile-without-tabs.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SliderRewievComponent } from './components/slider-rewiev/slider-rewiev.
     SpecificationsTabsComponent,
     TabSecurityComponent,
     SliderRewievComponent,
+    MobileWithoutTabsComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,6 @@ import {Component} from '@angular/core';
 
 
     <app-overflow-orange-blur></app-overflow-orange-blur>
-
   `,
   styleUrls: ['./app.component.scss']
 })

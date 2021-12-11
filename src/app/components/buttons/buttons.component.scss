@@ -10,6 +10,14 @@
       justify-content: space-between;
       border: 0.347vw solid white;
       transition:500ms ;
+      @media(max-width: 740px){
+          margin-top: 7.722vw;
+width: 38.222vw;
+height: 8.75vw;padding: 0 5.8vw;
+      }
+      @media(max-width: 480px){
+
+      }
       button {
         background: transparent;
         outline: none;
@@ -23,6 +31,12 @@
         letter-spacing: 0.035vw;
         font-size: 1.319vw;
         font-family: Gilroy-Semibold, sans-serif;
+        @media(max-width: 740px){
+            font-size: 2.319vw;
+        }
+        @media(max-width: 480px){
+
+        }
         &.change-white-color{
           color: black;
         }
@@ -36,7 +50,12 @@
           transition: 500ms;
           left: 46%;
           width: 9.194vw;
+          @media(max-width: 740px){
+              width: 20.494vw;
+          }
+          @media(max-width: 480px){
 
+          }
         }
       }
 
@@ -50,5 +69,11 @@
         height: 107%;
         background: white;
         border-radius: 4.514vw;
+        @media(max-width: 740px){
+            width: 18.194vw;
+        }
+        @media(max-width: 480px){
+
+        }
       }
     }

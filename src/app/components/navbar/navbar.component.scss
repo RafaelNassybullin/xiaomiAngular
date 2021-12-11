@@ -10,7 +10,13 @@ nav {
   transform: translateY(0);
   transition: 150ms ease-in-out;
   overflow: hidden;
+  @media(max-width: 740px){
+      height: 15vw;
+width: 100%;padding: 0 5.722vw;
+  }
+  @media(max-width: 480px){
 
+  }
   &.sticky {
     position: sticky;
     top: 0;
@@ -19,7 +25,12 @@ nav {
     transition: 150ms;
     backdrop-filter: blur(10px);
     background: rgba(97, 79, 79, 0.2);
+    @media(max-width: 740px){
+        height: 15vw;
+    }
+    @media(max-width: 480px){
 
+    }
     &.yes {
       transition: 150ms;
       transform: translateY(-105%);
@@ -50,6 +61,14 @@ nav {
         align-items: center;
         cursor: pointer;
         justify-content: center;
+        svg{
+          @media(max-width: 740px){
+              height: 5.7vw;
+          }
+          @media(max-width: 480px){
+
+          }
+        }
       }
 
       ul {
@@ -58,13 +77,23 @@ nav {
         justify-content: center;
         list-style: none;
         z-index: 15;
+        @media(max-width: 740px){
+            display: none;
+        }
+        @media(max-width: 480px){
 
+        }
         li {
           margin: 0 1.458vw;
           cursor: pointer;
           font-size: 1.111vw;
           font-weight: 600;
+          @media(max-width: 740px){
 
+          }
+          @media(max-width: 480px){
+
+          }
           &:hover {
             color: #FF4C0D;
 
@@ -82,6 +111,12 @@ nav {
       border: none;
       font-size: 1.111vw;
       font-family: Gilroy-Semibold, sans-serif;
+      @media(max-width: 740px){
+          display: none;
+      }
+      @media(max-width: 480px){
+
+      }
     }
   }
 }
