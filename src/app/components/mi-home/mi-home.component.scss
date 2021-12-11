@@ -6,11 +6,12 @@
   height: 39.931vw;
   position: relative;
   @media(max-width: 740px) {
-padding: 3vw 2.25vw 0 6.25vw;
-height: 63.931vw;
+    padding: 3vw 2.25vw 0 6.25vw;
+    height: 63.931vw;
   }
   @media(max-width: 480px) {
-
+    height: 188.931vw;
+    flex-direction: column;
   }
 
   .titles {
@@ -18,21 +19,23 @@ height: 63.931vw;
     padding-top: 8.333vw;
     padding-right: 6.111vw;
     @media(max-width: 740px) {
-width: 53.458vw;
+      width: 53.458vw;
       padding: 0;
     }
     @media(max-width: 480px) {
-
+      width: 90vw;
     }
 
     h1 {
       font-size: 3.125vw;
       color: #FF4C0D;
       @media(max-width: 740px) {
-font-size: 4.7vw;margin-top: 4vw;
+        font-size: 4.7vw;
+        margin-top: 4vw;
       }
       @media(max-width: 480px) {
-
+        font-size: 7.7vw;
+        margin-top: -13vw;
       }
     }
 
@@ -42,12 +45,14 @@ font-size: 4.7vw;margin-top: 4vw;
       line-height: 1.458vw;
       width: 24.861vw;
       @media(max-width: 740px) {
-font-size: 2.3vw;
-line-height: 3.458vw;
-width: 39.861vw;
+        font-size: 2.3vw;
+        line-height: 3.458vw;
+        width: 39.861vw;
       }
       @media(max-width: 480px) {
-
+        font-size: 4.3vw;
+        line-height: 6.458vw;
+        width: 87.861vw;
       }
     }
 
@@ -58,11 +63,14 @@ width: 39.861vw;
       align-items: center;
       justify-content: space-between;
       @media(max-width: 740px) {
-margin-top: 2.1vw;
-width: 39vw;
+        margin-top: 2.1vw;
+        width: 39vw;
       }
       @media(max-width: 480px) {
-
+        margin-top: 4.1vw;
+        width: 100%;
+        margin-bottom: 7vw;
+        padding: 0 3vw;
       }
 
       button {
@@ -74,11 +82,14 @@ width: 39vw;
         border-radius: 0.347vw;
         cursor: pointer;
         @media(max-width: 740px) {
-width: 17.722vw;
-height: 5.778vw;border-radius: 0.747vw;
+          width: 17.722vw;
+          height: 5.778vw;
+          border-radius: 0.747vw;
         }
         @media(max-width: 480px) {
-
+            width: 38.722vw;
+            height: 13.778vw;
+            border-radius: 1.747vw;
         }
       }
     }
@@ -87,10 +98,10 @@ height: 5.778vw;border-radius: 0.747vw;
   .image {
     width: 27.778vw;
     @media(max-width: 740px) {
-width: 34.778vw;
+      width: 34.778vw;
     }
     @media(max-width: 480px) {
-
+      width: 89.778vw;height: 135vw;
     }
 
     img {
@@ -111,6 +122,6 @@ width: 34.778vw;
 
   }
   @media(max-width: 480px) {
-
+      width: 87vw;display: flex;justify-content: center;
   }
 }

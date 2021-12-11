@@ -1,34 +1,42 @@
 .specifications-tabs {
   padding: 3vw 9.722vw;
-  @media(max-width: 740px){
-      padding: 2vw 0;
+  @media(max-width: 740px) {
+    padding: 2vw 0;
 
   }
-  @media(max-width: 480px){
+  @media(max-width: 480px) {
+    padding: 14vw 0;
+
+
 
   }
+
   h1 {
     font-size: 3.125vw;
     width: 66vw;
     font-weight: 500;
     margin-bottom: 5vw;
-    @media(max-width: 740px){
+    @media(max-width: 740px) {
       font-size: 4.6vw;
       width: 94vw;
-      padding: 0 6.25vw;line-height: 5vw;
+      padding: 0 6.25vw;
+      line-height: 5vw;
     }
-    @media(max-width: 480px){
-
+    @media(max-width: 480px) {
+      font-size: 8.6vw;
+      width: 100vw;
+      line-height: 9vw;margin-bottom: 10vw;
     }
   }
 
   .tabs-container {
-    @media(max-width: 740px){
-        display: none;
+    @media(max-width: 740px) {
+      display: none;
     }
-    @media(max-width: 480px){
+    @media(max-width: 480px) {
 
     }
+
     .tabs-wrap {
       display: flex;
       position: relative;
@@ -65,7 +73,8 @@
         top: 2.5vw;
         left: 0;
         overflow: hidden;
-z-index: -2;
+        z-index: -2;
+
         .innline-border {
           width: 100%;
           height: 100%;
@@ -79,6 +88,7 @@ z-index: -2;
             transition: 500ms ease-in-out;
             transition-property: left, width;
             transition-delay: 100ms;
+
             &._active-border-one {
               left: 0;
               width: 25vw;
@@ -110,15 +120,19 @@ z-index: -2;
         transition: 500ms transform ease-in-out;
         padding: 3vw 0;
         transition-delay: 100ms;
+
         &._active-content-one {
           transform: translate(0vw, 0);
         }
+
         &._active-content-two {
           transform: translate(0vw, -32vw);
         }
+
         &._active-content-three {
           transform: translate(0vw, -66vw);
         }
+
         .tabs-content-item {
           width: 100%;
           display: flex;
@@ -133,10 +147,12 @@ z-index: -2;
             overflow: hidden;
             position: relative;
             z-index: 12;
+
             &.order {
               order: 2;
 
             }
+
             img {
               position: absolute;
               top: 0;

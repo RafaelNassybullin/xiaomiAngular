@@ -11,10 +11,19 @@ main {
     margin-top: 13.278vw;
   }
   @media(max-width: 480px) {
-
+    height: 189.806vw;
+    margin-top: -0.722vw;
+    display: flex;
+    align-items: flex-end;
   }
   //overflow: hidden;
   .text {
+    @media(max-width: 740px) {
+
+    }
+    @media(max-width: 480px) {
+      height: 98vw;
+    }
 
     h1 {
       font-size: 5.556vw;
@@ -27,7 +36,9 @@ main {
         width: 83.389vw;
       }
       @media(max-width: 480px) {
-
+        font-size: 10vw;
+        line-height: 9vw;
+        font-weight: 500;
       }
     }
 
@@ -44,7 +55,10 @@ main {
         line-height: 3.5vw;
       }
       @media(max-width: 480px) {
-
+        font-size: 5.283vw;
+        width: 90.611vw;
+        margin-top: 6.222vw;
+        line-height: 5.7vw;
       }
     }
   }
@@ -80,10 +94,12 @@ main {
       overflow: hidden;
       @media(max-width: 740px) {
         width: 119.437vw;
-height: 125.063vw;
+        height: 125.063vw;
       }
       @media(max-width: 480px) {
-
+width: 155.437vw;
+height: 168.063vw;
+transform: translate(-118vw, -12vw);
       }
 
       img {

@@ -13,7 +13,8 @@ section {
     margin-top: 8vw;
   }
   @media(max-width: 480px) {
-
+    height: 131.667vw;
+    margin-top: -16vw;
   }
 
   .decoratiom-line {
@@ -58,7 +59,7 @@ section {
       object-position: -37vw 0vw;
     }
     @media(max-width: 480px) {
-
+      object-position: -100vw 0vw;
     }
   }
 
@@ -73,7 +74,9 @@ section {
       justify-content: flex-start;
     }
     @media(max-width: 480px) {
-
+      height: 118vw;
+      justify-content: space-between;
+      width: 83vw;
     }
 
     .logo {
@@ -82,7 +85,7 @@ section {
           height: 5.7vw;
         }
         @media(max-width: 480px) {
-
+          height: 9.7vw;
         }
       }
 
@@ -114,7 +117,9 @@ section {
           width: 45.083vw;
         }
         @media(max-width: 480px) {
-
+          font-size: 7.9vw;
+          margin-bottom: 4.778vw;
+          width: 100%;
         }
       }
 
@@ -130,7 +135,10 @@ section {
           line-height: 3.431vw;
         }
         @media(max-width: 480px) {
-
+          font-size: 4.25vw;
+          width: 100%;
+          line-height: 6.431vw;
+          margin-bottom: 2vw;
         }
       }
     }

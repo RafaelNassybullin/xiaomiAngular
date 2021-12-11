@@ -15,7 +15,7 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
             <h1>Mi Electric Scooter Pro 2</h1>
             <h2>54 990 ₽</h2>
             <div class="button-component">
-              <app-buttons></app-buttons>
+              <app-buttons [buy]="true"></app-buttons>
             </div>
           </div>
           <button>Купить</button>

@@ -16,7 +16,10 @@
     margin: 12vw 0;
   }
   @media(max-width: 480px) {
-
+    width: 289.389vw;
+padding: 0 0 10vw 5vw;
+height: 177vw;
+margin: 19vw 0 5vw;
   }
 
   h1 {
@@ -28,7 +31,7 @@
       color: #FFF;
     }
     @media(max-width: 480px) {
-
+          font-size: 7.5vw;width: 63vw;margin-bottom: 6vw;
     }
   }
 }
@@ -41,7 +44,7 @@
     margin-top: 2vw;
   }
   @media(max-width: 480px) {
-
+    height: 104vw;
   }
 }
 
@@ -56,7 +59,7 @@
     width: 65.333vw;
   }
   @media(max-width: 480px) {
-
+    width: 90.333vw;
   }
 }
 
@@ -76,7 +79,9 @@
     padding: 7vw 5.778vw;
   }
   @media(max-width: 480px) {
-
+    height: 99.417vw;
+border-radius: 5.042vw;
+padding: 10vw 9.778vw;
   }
 
   h4 {
@@ -88,7 +93,8 @@
       margin-bottom: 5.5vw;
     }
     @media(max-width: 480px) {
-
+      font-size: 5vw;
+margin-bottom: 9.5vw;
     }
 
     &:after {
@@ -105,7 +111,9 @@
         height: 0.7vw;
       }
       @media(max-width: 480px) {
-
+top: 9.9vw;
+width: 30.944vw;
+height: 0.9vw;
       }
     }
   }
@@ -119,7 +127,8 @@
       line-height: 2.9vw;
     }
     @media(max-width: 480px) {
-
+font-size: 3.5vw;
+line-height: 5.9vw;
     }
   }
 
@@ -144,7 +153,7 @@
 
   }
   @media(max-width: 480px) {
-
+align-items: flex-start;
   }
 }
 
@@ -158,7 +167,7 @@
     width: 86vw;
   }
   @media(max-width: 480px) {
-
+    justify-content: center;
   }
 
   button {
@@ -179,7 +188,9 @@
       font-size: 2.3vw;
     }
     @media(max-width: 480px) {
-
+width: 100%;
+height: 16.75vw;
+font-size: 4.5vw;border-radius: 19.514vw;
     }
   }
 
@@ -192,7 +203,7 @@
       width: 20.5vw;
     }
     @media(max-width: 480px) {
-
+display: none;
     }
 
     .slider-prev, .slider-next {

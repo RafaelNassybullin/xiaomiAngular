@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 import { DOCUMENT } from '@angular/common';
 
@@ -7,7 +7,8 @@ import { DOCUMENT } from '@angular/common';
   selector: 'app-buttons',
   template: `
     <div [ngClass]="changeTheme.toggleTheme?'buttonss _activeWhite':'buttonss'">
-          <button [ngClass]="changeTheme.toggleTheme?'change-white-color':''" (click)="toFalse()">Белый</button>
+          <button [ngClass]="changeTheme.toggleTheme?'change-white-color':''"
+                  (click)="toFalse()">Белый</button>
           <button (click)="toTrue()">Черный</button>
     </div>
   `,
@@ -19,10 +20,9 @@ export class ButtonsComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     public changeTheme:BooleanToggleThemeService
   ) { }
-
+  @Input() buy:any
   ngOnInit(): void {
-
-
+    console.log(this.buy);
   }
 
   toFalse(){
@@ -33,6 +33,8 @@ export class ButtonsComponent implements OnInit {
     this.changeTheme.t()
     this.document.body.classList.add('whiteTheme')
   }
+
+
 
 
 

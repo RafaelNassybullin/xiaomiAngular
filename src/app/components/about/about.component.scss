@@ -8,7 +8,7 @@ swiper {
     height: 64.667vw;
   }
   @media(max-width: 480px) {
-
+    height: 164.667vw;
   }
 }
 
@@ -17,7 +17,7 @@ swiper {
 
   }
   @media(max-width: 480px) {
-
+    //padding: 9.5vw 6.25vw;
   }
 
   .slide-wrapper {
@@ -49,13 +49,13 @@ swiper {
         transform: scale(1.25);
       }
       @media(max-width: 480px) {
-
+        left: -4vw;
+        transform: scale(1.1);
+        top: -8vw;
       }
     }
   }
-
 }
-
 
 .about-text {
   z-index: 5;
@@ -67,7 +67,7 @@ swiper {
     justify-content: flex-start;
   }
   @media(max-width: 480px) {
-
+    justify-content: space-between;
   }
 
   .about-logo {
@@ -76,7 +76,7 @@ swiper {
         height: 5.708vw;
       }
       @media(max-width: 480px) {
-
+        height: 9.708vw;
       }
     }
 
@@ -104,7 +104,7 @@ swiper {
         margin-top: 16vw;
       }
       @media(max-width: 480px) {
-
+        font-size: 7.5vw;
       }
     }
 
@@ -120,7 +120,12 @@ swiper {
         line-height: 3.458vw;
       }
       @media(max-width: 480px) {
-
+        width: 80.944vw;
+        font-size: 3.5vw;
+        line-height: 6.458vw;
+        color: white;
+        margin-bottom: 27vw;
+        margin-top: 5vw;
       }
     }
   }

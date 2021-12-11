@@ -4,7 +4,8 @@
     padding: 0 5.7vw;
   }
   @media(max-width: 480px) {
-
+    padding: 0 6.25vw;
+    margin-top: -26vw;
   }
 
   .block {
@@ -22,7 +23,9 @@
       border-radius: 3.042vw;
     }
     @media(max-width: 480px) {
-
+      height: 193.194vw;
+      padding: 11vw 9.464vw;
+      border-radius: 6.042vw;
     }
 
     .buy-image {
@@ -45,7 +48,10 @@
         width: 67.444vw;
       }
       @media(max-width: 480px) {
-
+        top: 71vw;
+        right: 8vw;
+        height: 74.278vw;
+        width: 73.444vw;
       }
 
       img {
@@ -62,7 +68,9 @@
           margin-left: 6vw;
         }
         @media(max-width: 480px) {
-
+          width: 70vw;
+          margin-right: -16vw;
+          margin-left: 16vw;
         }
 
         &._show {
@@ -72,7 +80,7 @@
             transform: translateX(-40vw);
           }
           @media(max-width: 480px) {
-
+            transform: translateX(-52vw);
           }
         }
       }
@@ -90,7 +98,7 @@
 
       }
       @media(max-width: 480px) {
-
+        width: 100%;
       }
 
       .buy-titles {
@@ -108,7 +116,9 @@
             font-size: 4.5vw;
           }
           @media(max-width: 480px) {
-
+            font-size: 7.5vw;
+            width: 60vw;
+            margin-bottom: 3.042vw;
           }
         }
 
@@ -119,7 +129,7 @@
             font-size: 3.7vw;
           }
           @media(max-width: 480px) {
-
+            font-size: 6.7vw;
           }
         }
 
@@ -152,7 +162,12 @@
           margin-bottom: 6.7vw;
         }
         @media(max-width: 480px) {
-
+          width: 68.472vw;
+          height: 16.75vw;
+          font-size: 4.9vw;
+          margin-bottom: 8.7vw;
+          border-radius: 11vw;
+          align-self: center;
         }
       }
     }
@@ -176,7 +191,10 @@
           left: 6vw;
         }
         @media(max-width: 480px) {
-
+          font-size: 4.7vw;
+          bottom: 8vw;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
 
@@ -225,7 +243,7 @@
       border-radius: 3.042vw;
     }
     @media(max-width: 480px) {
-
+      border-radius: 6.042vw;
     }
   }
 }
