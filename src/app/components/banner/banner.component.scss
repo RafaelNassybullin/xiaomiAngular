@@ -25,7 +25,12 @@ section {
     height: 63.194vw;
     z-index: 6;
     @media(max-width: 740px) {
-
+top: -119vw;
+left: -33vw;
+width: 202vw;
+height: 120.194vw;
+z-index: -1;
+transform: rotate(161deg);
     }
     @media(max-width: 480px) {
 
@@ -40,7 +45,7 @@ section {
 
   .decoratiom-line_2 {
     @media(max-width: 740px) {
-
+display: none;
     }
     @media(max-width: 480px) {
 

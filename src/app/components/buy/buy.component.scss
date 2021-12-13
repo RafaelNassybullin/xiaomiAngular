@@ -5,7 +5,7 @@
   }
   @media(max-width: 480px) {
     padding: 0 6.25vw;
-    margin-top: -26vw;
+    //margin-top: -26vw;
   }
 
   .block {
@@ -195,6 +195,8 @@
           bottom: 8vw;
           left: 50%;
           transform: translateX(-50%);
+          width: 100%;
+text-align: center;
         }
       }
 

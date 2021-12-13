@@ -5,7 +5,7 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
   selector: 'app-tab-security',
   template: `
     <section class="security">
-      <h1>Заботится о вашей безопасности</h1>
+      <h1 [ngStyle]="tabsTwoThemeChange.toggleTheme?{color:'#000'}:{}">Заботится о вашей безопасности</h1>
       <app-mobile-without-tabs
         [mobileSecuredata]="dataSecurityMobileTab">
       </app-mobile-without-tabs>

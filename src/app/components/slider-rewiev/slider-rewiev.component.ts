@@ -10,7 +10,7 @@ SwiperCore.use([Navigation]);
   selector: 'app-slider-rewiev',
   template: `
     <section class="slider-rewiew-container">
-      <h1>Отзывы о Mi Scooter Pro 2</h1>
+      <h1 [ngStyle]="sliderChangeTheme.toggleTheme?{color:'#000'}:{}">Отзывы о Mi Scooter Pro 2</h1>
       <div class="wrapper-rewiev">
         <swiper class="swiper-rewiev"
                 [config]="config"

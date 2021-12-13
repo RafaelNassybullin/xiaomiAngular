@@ -6,7 +6,7 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
   template: `
     <section>
       <div class="title-wrapper">
-        <h1>Часто задаваемые вопросы</h1>
+        <h1 [ngStyle]="questionsTheme.toggleTheme?{color:'#000'}:{}">Часто задаваемые вопросы</h1>
         <p>Все ваши часто задаваемые вопросы о электросамокате Mi Scooter Pro 2. Если у вас есть собственный вопрос - задайте его через форму обратной связи.</p>
         <button [ngStyle]="questionsTheme.toggleTheme?{background:'black', color:'white'}:{}">Задать вопрос</button>
       </div>
@@ -15,7 +15,7 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
           <h3>На него нужны права категории M?</h3>
           <p>Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не ослепляя других участников движения.</p>
         </div>
-        <div class="question-items">
+        <div class="question-items mod">
           <h3>У меня вес 135 кг, выдержит ли этот самокат?</h3>
           <p>Самокат определенно выдержит и будет ехать, но не с максимальной скоростью.</p>
         </div>

@@ -6,7 +6,7 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-buttons',
   template: `
-    <div [ngClass]="changeTheme.toggleTheme?'buttonss _activeWhite':'buttonss'">
+    <div [ngStyle]="changeTheme.toggleNav?{zIndex:-2}:{}" [ngClass]="changeTheme.toggleTheme?'buttonss _activeWhite':'buttonss'">
           <button [ngClass]="changeTheme.toggleTheme?'change-white-color':''"
                   (click)="toFalse()">Белый</button>
           <button (click)="toTrue()">Черный</button>
@@ -33,10 +33,6 @@ export class ButtonsComponent implements OnInit {
     this.changeTheme.t()
     this.document.body.classList.add('whiteTheme')
   }
-
-
-
-
 
 
 }

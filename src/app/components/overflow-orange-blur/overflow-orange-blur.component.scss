@@ -10,7 +10,7 @@
   z-index: -3;
 
 
-  &.overflow-blur-white{
+  &.overflow-blur-white {
     background: #E0E0E040;
     backdrop-filter: blur(4px);
   }
@@ -26,6 +26,16 @@
     right: -67vw;
     width: 171.611vw;
     height: 128.611vw;
+    z-index: -99;
+    @media(max-width: 740px) {
+      top: -71vw;
+      right: -108vw;
+      width: 225.611vw;
+      height: 156.611vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-two {
@@ -34,6 +44,15 @@
     right: 51vw;
     width: 84.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 86vw;
+      right: 5vw;
+      width: 168.611vw;
+      height: 143vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-three {
@@ -42,6 +61,15 @@
     right: -39vw;
     width: 84.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 190vw;
+      right: -20vw;
+      width: 147.611vw;
+      height: 139vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-four {
@@ -49,6 +77,15 @@
     right: 2vw;
     width: 38.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 388vw;
+      right: -69vw;
+      width: 138.611vw;
+      height: 138vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-five {
@@ -56,6 +93,15 @@
     right: 14vw;
     width: 38.611vw;
     height: 56vw;
+    @media(max-width: 740px) {
+      top: 554vw;
+      right: 26vw;
+      width: 140.611vw;
+      height: 150vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-six {
@@ -63,6 +109,15 @@
     right: 73vw;
     width: 38.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 220vw;
+      right: -52vw;
+      width: 162.611vw;
+      height: 161vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-seven {
@@ -70,6 +125,12 @@
     right: 49vw;
     width: 55.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      display: none;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-eight {
@@ -77,6 +138,12 @@
     right: 0;
     width: 56.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      display: none;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-nine {
@@ -84,6 +151,12 @@
     right: -38vw;
     width: 97.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      display: none;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-ten {
@@ -91,6 +164,15 @@
     right: 62vw;
     width: 66.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 964vw;
+      right: 14vw;
+      width: 148.611vw;
+      height: 147vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-eleven {
@@ -98,6 +180,15 @@
     right: 58vw;
     width: 64.611vw;
     height: 63vw;
+    @media(max-width: 740px) {
+      top: 1044vw;
+      right: -59vw;
+      width: 124.611vw;
+      height: 122vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
   &.blur-elipse-twelve {
@@ -105,6 +196,15 @@
     right: -21vw;
     width: 94.611vw;
     height: 89vw;
+    @media(max-width: 740px) {
+      top: 1175vw;
+      right: -91vw;
+      width: 176.611vw;
+      height: 140vw;
+    }
+    @media(max-width: 480px) {
+
+    }
   }
 
 
@@ -118,7 +218,12 @@
 .reusable-decor-line {
   width: 87.222vw;
   position: absolute;
+@media(max-width: 740px){
+    display: none;
+}
+@media(max-width: 480px){
 
+}
   &.reusable-decor-line-1 {
     top: 167vw;
     left: 80vw;

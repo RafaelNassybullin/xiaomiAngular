@@ -6,10 +6,12 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 @Component({
   selector: 'app-navbar',
   template: `
-<nav [ngClass]="
-    innerWidthh>600&&value==='[UP!]'
+<nav
+  [ngStyle]="navbarChangeTheme.toggleNav&&!navbarChangeTheme.toggleTheme?{background: '#000'}:navbarChangeTheme.toggleNav&&navbarChangeTheme.toggleTheme?{background: '#FFFFFF'}:{}"
+  [ngClass]="
+    offset>600&&value==='[UP!]'
     ?'sticky yes'
-    :innerWidthh===0||innerWidthh<1
+    :offset===0||offset<1
     ?''
     :navbarChangeTheme.toggleTheme
     ?'sticky white-nav'
@@ -24,7 +26,8 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
                     />
             </svg>
           </div>
-          <ul>
+          <ul [ngStyle]="innerWidthh>740?{background:'transparent'}:navbarChangeTheme.toggleTheme?{background:'white' }:{}"
+              [ngClass]="navbarChangeTheme.toggleNav?'_toggle':''">
             <li>О продукте</li>
             <li>Внешний вид</li>
             <li>Безопасность</li>
@@ -33,6 +36,18 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
           </ul>
         </div>
         <button [ngStyle]="navbarChangeTheme.toggleTheme?{background:'black', color:'white'}:{}">Купить</button>
+        <div
+          class="burger"
+          [ngStyle]="navbarChangeTheme.toggleTheme?{background:'black', color:'white'}:{}"
+             (click)="navbarChangeTheme.toggleNavMethod()"
+        >
+          <svg [ngStyle]="navbarChangeTheme.toggleTheme?{fill:'#FF4C0D'}:{}"  *ngIf="!navbarChangeTheme.toggleNav" height="3vw"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.11 95.32"><path d="M71.53,0C92.36,0,113.19,0,134,0c6,0,9.23,3,9.08,8.13-.12,4-2.2,6.54-6,7.5a17.49,17.49,0,0,1-4,.26q-61.5,0-123,0c-6.26,0-9.44-2.2-10-6.74C-.61,3.5,2.69,0,9,0Q40.29,0,71.53,0Z"/><path d="M71.54,39.92q31,0,62,0c6.65,0,9.68,2.58,9.58,8-.08,5.07-3.2,7.7-9.55,7.7-41.32,0-82.64.09-124-.13-2.79,0-6.5-1.46-8.07-3.53-1.4-1.86-1.46-6.09-.24-8.19S6,40.11,8.57,40.07C29.56,39.78,50.55,39.91,71.54,39.92Z"/><path d="M71.59,95.28c-21,0-42,0-62.95,0-3.73,0-7.23-1.07-7.9-4.61-.54-2.83.59-6.37,2-9,.73-1.34,3.79-2,5.79-2q63-.17,125.91-.06c5.66,0,8.75,3.08,8.64,8s-3.18,7.57-9.07,7.57Q102.83,95.32,71.59,95.28Z"/>
+          </svg>
+          <svg [ngStyle]="navbarChangeTheme.toggleTheme?{fill:'#FF4C0D'}:{}" *ngIf="navbarChangeTheme.toggleNav" height="3vw"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106.33 105.89"><path d="M64.23,52.68q19.42-19.44,38.88-38.82c2.65-2.62,4.36-5.87,2.33-8.84C103.81,2.63,100.51.93,97.62.07c-1.46-.43-4.07,1.29-5.49,2.7q-19.5,19.41-39,38.85Q33.7,22.18,14.2,2.77c-1.42-1.41-4-3.13-5.48-2.7C5.82.93,2.52,2.63.89,5c-2,3-.32,6.22,2.33,8.84Q22.72,33.21,42.1,52.68q-19.53,19.53-39,39.08c-4,4-4,8.36-.42,11.8s7.6,3.1,11.76-1.06Q33.81,83.15,53.17,63.75,72.54,83.13,91.93,102.5c4.17,4.16,8.2,4.47,11.76,1.06s3.58-7.79-.42-11.8Q83.77,72.2,64.23,52.68Z"/>
+          </svg>
+        </div>
       </div>
     </nav>
   `,
@@ -41,7 +56,9 @@ import {BooleanToggleThemeService} from "../../boolean-toggle-theme.service";
 })
 export class NavbarComponent implements OnInit {
   public value!:string
-  public innerWidthh: number = 0;
+  public offset: number = 0;
+
+  public innerWidthh:number = window.innerWidth
   constructor(public navbarChangeTheme:BooleanToggleThemeService) {}
   ngOnInit(): void {
     const scroll$ = fromEvent(window, 'scroll').pipe(
@@ -53,5 +70,14 @@ export class NavbarComponent implements OnInit {
     ).subscribe(val=> {this.value = val});
   }
   @HostListener('document:scroll', ['$event'])
-  onResize(event:any) {this.innerWidthh = window.pageYOffset;}
+  onScrol(event:any) {
+    this.offset = window.pageYOffset;
+    this.value!=='[UP!]'?this.navbarChangeTheme.toggleNav = false:''
+    this.offset<600&&this.value==='[UP!]'?this.navbarChangeTheme.toggleNav = false:''
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.innerWidthh = window.innerWidth
+  }
+
 }

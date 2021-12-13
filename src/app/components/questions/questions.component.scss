@@ -155,7 +155,7 @@ section {
           @media(max-width: 480px) {
             width: 46.944vw;
             height: 0.908vw;
-            top: 8.5vw;
+            top: 13.5vw;
           }
         }
 
@@ -179,3 +179,13 @@ section {
 }
 
 
+.question-items.mod {
+  h3 {
+    &:after {
+      @media(max-width: 480px) {
+        //background: brown ;
+        top: 13.5vw !important;
+      }
+    }
+  }
+}

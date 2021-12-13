@@ -1,7 +1,7 @@
 nav {
   height: 5vw;
   width: 100%;
-  z-index: 99;
+
   display: flex;
   margin: 2vw 0;
   align-items: center;
@@ -9,11 +9,13 @@ nav {
   padding: 0 9.722vw;
   transform: translateY(0);
   transition: 150ms ease-in-out;
-  overflow: hidden;
+  z-index: 99;
+  //overflow: hidden;
   @media(max-width: 740px) {
     height: 15vw;
     width: 100%;
     padding: 0 5.722vw;
+    margin: 0;
   }
   @media(max-width: 480px) {
     height: 23vw;
@@ -52,12 +54,13 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 36;
-    @media(max-width: 740px){
+    @media(max-width: 740px) {
 
     }
-    @media(max-width: 480px){
-        height: 14vw;
+    @media(max-width: 480px) {
+      height: 14vw;
     }
+
     .logo-nav-wrapper {
       display: flex;
       align-items: center;
@@ -85,13 +88,35 @@ nav {
         align-items: center;
         justify-content: center;
         list-style: none;
-        z-index: 15;
+
         @media(max-width: 740px) {
           display: none;
+          position: fixed;
+          left: 0;
+          top: 15vw;
+          width: 100%;
+          //display:flex;
+          align-items: center;
+          background: #000;
+          font-size: 6vw;
+          justify-content: center;
+          flex-direction: column;
+          height: 73vw;
+          z-index: 999;
         }
         @media(max-width: 480px) {
-
+          top: 23vw;
         }
+
+        &._toggle {
+          @media(max-width: 740px) {
+            display: flex;z-index: 999;
+          }
+          @media(max-width: 480px) {
+
+          }
+        }
+
 
         li {
           margin: 0 1.458vw;
@@ -99,7 +124,8 @@ nav {
           font-size: 1.111vw;
           font-weight: 600;
           @media(max-width: 740px) {
-
+            margin: 3vw 1.458vw;
+            font-size: 6.111vw;
           }
           @media(max-width: 480px) {
 
@@ -107,7 +133,12 @@ nav {
 
           &:hover {
             color: #FF4C0D;
+            @media(max-width: 740px){
 
+            }
+            @media(max-width: 480px){
+
+            }
           }
         }
       }
@@ -132,6 +163,36 @@ nav {
   }
 }
 
+.burger {
+  display: none;
+
+  &._toggle {
+    @media(max-width: 740px) {
+
+    }
+    @media(max-width: 480px) {
+
+    }
+  }
+
+  @media(max-width: 740px) {
+    width: 8vw;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15vw;
+    background: #E0E0E0;
+    cursor: pointer;
+    color: black;
+    z-index: 19;
+    font-size: 4vw;
+  }
+  @media(max-width: 480px) {
+    width: 13vw;
+    height: 13vw;
+  }
+}
 
 @-moz-document url-prefix() {
   nav.sticky {
